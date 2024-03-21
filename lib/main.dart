@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:study_m8/screens/start_screen/start_screen.dart';
+import 'package:study_m8/ui/views/get_you_in/get_you_in.dart';
+import 'package:study_m8/ui/views/onboarding/onboarding.dart';
+import 'package:study_m8/ui/views/start_screen/start_screen.dart';
 
 void main() => runApp(const MyApp());
 
-const txtColor = Colors.white;
-const bgColor = Color.fromRGBO(61, 52, 139, 1.0);
-//const bgColor = Color(0xff3D348B);
+const mainColor = Color(0xff3D348B);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(brightness: Brightness.light),
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      // initialRoute: '/',
+      routes: {
+        '/': (context) => const Splash(),
+        '/onboarding': (context) => const OnboardingScreen(),
+        '/getIn': (context) => const GetIn()
+      },
     );
   }
 }

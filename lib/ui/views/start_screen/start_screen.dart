@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:study_m8/main.dart';
-import 'package:study_m8/screens/onboarding/onboarding.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -16,13 +15,10 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 2), () {
       setState(() {
         isLoading = false;
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const OnboardingScreen()),
-        );
+        Navigator.pushNamed(context, '/onboarding');
       });
     });
   }
@@ -30,7 +26,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
+      backgroundColor: mainColor,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -38,15 +34,14 @@ class _SplashState extends State<Splash> {
             children: [
               const Text(
                 'StudyM8',
-                style: TextStyle(color: txtColor, fontSize: 64.0),
+                style: TextStyle(color: Colors.white, fontSize: 64.0),
               ),
-              isLoading
-                  ? const CircularProgressIndicator(
-                      color: Colors.white,
-                      backgroundColor: Colors.grey,
-                      strokeWidth: 6.0,
-                    )
-                  : Container(),
+              if (isLoading)
+                const CircularProgressIndicator(
+                  color: Colors.white,
+                  backgroundColor: Colors.grey,
+                  strokeWidth: 6.0,
+                )
             ],
           ),
         ),
