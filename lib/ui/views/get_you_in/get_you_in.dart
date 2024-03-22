@@ -31,7 +31,10 @@ class GetIn extends StatelessWidget {
                     SocialButton(
                       onTap: () {},
                       social: el,
-                    )
+                    ),
+                  // SocialButton.google(onTap: () {}),
+                  // SocialButton.apple(onTap: () {}),
+                  // SocialButton.facebook(onTap: () {})
                 ],
               ),
               const Padding(

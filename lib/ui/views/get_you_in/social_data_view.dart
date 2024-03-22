@@ -5,6 +5,27 @@ import 'package:study_m8/models/social_enum.dart';
 class SocialButton extends StatelessWidget {
   const SocialButton({super.key, required this.social, required this.onTap});
 
+  factory SocialButton.google({required VoidCallback onTap}) {
+    return SocialButton(
+      social: Social.google,
+      onTap: onTap,
+    );
+  }
+
+  factory SocialButton.apple({required VoidCallback onTap}) {
+    return SocialButton(
+      social: Social.apple,
+      onTap: onTap,
+    );
+  }
+
+  factory SocialButton.facebook({required VoidCallback onTap}) {
+    return SocialButton(
+      social: Social.facebook,
+      onTap: onTap,
+    );
+  }
+
   final Social social;
   final VoidCallback onTap;
 
