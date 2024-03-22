@@ -10,6 +10,7 @@ class GetIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
       body: SafeArea(
           minimum: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -17,12 +18,11 @@ class GetIn extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Image.asset('images/getIn.png'),
-              const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 24.0),
+              Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 24.0),
                   child: Text(
                     'Let\'s get you in',
-                    style:
-                        TextStyle(fontSize: 24.0, fontWeight: FontWeight.w500),
+                    style: theme.textTheme.bodyMedium,
                   )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -37,14 +37,11 @@ class GetIn extends StatelessWidget {
                   // SocialButton.facebook(onTap: () {})
                 ],
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 24.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 24.0),
                 child: Text(
                   'Or',
-                  style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: theme.textTheme.bodyMedium,
                 ),
               ),
               SizedBox(

@@ -14,7 +14,7 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreen extends State<OnboardingScreen> {
   int currentPage = 0;
 
-  void navigateToNextPage(BuildContext context) {
+  void _navigateToNextPage(BuildContext context) {
     if (currentPage < onboardingData.length - 1) {
       setState(() => currentPage++);
     } else {
@@ -56,7 +56,7 @@ class _OnboardingScreen extends State<OnboardingScreen> {
                     bgColor: Colors.white,
                   ),
                   CustomButton(
-                    onPressed: () => navigateToNextPage(context),
+                    onPressed: () => _navigateToNextPage(context),
                     buttonText: 'Next',
                     txtColor: mainColor,
                     bgColor: Colors.white,

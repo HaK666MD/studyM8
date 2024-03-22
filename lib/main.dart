@@ -15,7 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
-      theme: ThemeData(brightness: Brightness.light),
+      theme: ThemeData(
+        brightness: Brightness.light,
+        fontFamily: 'Roboto',
+        textTheme: const TextTheme(
+            bodyMedium: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w500)),
+      ),
       darkTheme: ThemeData(brightness: Brightness.dark),
       // initialRoute: '/',
       routes: {
