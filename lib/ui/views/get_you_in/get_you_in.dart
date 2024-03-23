@@ -19,7 +19,7 @@ class GetIn extends StatelessWidget {
             children: [
               Image.asset('images/getIn.png'),
               Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 24.0),
+                  padding: const EdgeInsets.symmetric(vertical: 14.0),
                   child: Text(
                     'Let\'s get you in',
                     style: theme.textTheme.bodyMedium,
@@ -38,7 +38,7 @@ class GetIn extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 24.0),
+                padding: const EdgeInsets.symmetric(vertical: 14.0),
                 child: Text(
                   'Or',
                   style: theme.textTheme.bodyMedium,
@@ -55,7 +55,7 @@ class GetIn extends StatelessWidget {
               ),
               Center(
                 child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 16.0),
+                    padding: const EdgeInsets.symmetric(vertical: 14.0),
                     child: Text.rich(TextSpan(children: [
                       const TextSpan(
                           text: 'New to StudyM8? ',
