@@ -8,6 +8,9 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
+  flutter_rating_bar: ^4.0.1
+  readmore: ^2.2.0
+  flutter_svg: ^2.0.10+1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -16,11 +19,8 @@ flutter:
   uses-material-design: true
   assets:
     - images/
-  fonts:
-    - family: Roboto
-      fonts:
-        - asset: fonts/Roboto-Regular.ttf
-        - asset: fonts/Roboto-Bold.ttf
-    # - family: Pacifico
-    #   fonts:
-    #     - asset: fonts/Pacifico.ttf
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: fonts/Roboto-Regular.ttf
+  #       - asset: fonts/Roboto-Bold.ttf

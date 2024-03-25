@@ -49,17 +49,28 @@ class _OnboardingScreen extends State<OnboardingScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CustomButton(
-                    onPressed: () => Navigator.pushNamed(context, '/getIn'),
-                    buttonText: 'Skip',
-                    txtColor: mainColor,
-                    bgColor: Colors.white,
-                  ),
-                  CustomButton(
-                    onPressed: () => _navigateToNextPage(context),
-                    buttonText: 'Next',
-                    txtColor: mainColor,
-                    bgColor: Colors.white,
+                  Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: CustomButton(
+                         onPressed: () => Navigator.pushNamed(context, '/getIn'),
+                         buttonText: 'Skip',
+                         txtColor: mainColor,
+                         bgColor: Colors.white,
+                                          )
+                      )),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: CustomButton(
+                        onPressed: () => _navigateToNextPage(context),
+                        buttonText: 'Next',
+                        txtColor: mainColor,
+                        bgColor: Colors.white,
+                      )
+                    )
                   )
                 ],
               )

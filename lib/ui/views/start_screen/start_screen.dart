@@ -2,20 +2,20 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:study_m8/main.dart';
 
-class Splash extends StatefulWidget {
-  const Splash({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<Splash> createState() => _SplashState();
+  State<SplashScreen> createState() => _SplashState();
 }
 
-class _SplashState extends State<Splash> {
+class _SplashState extends State<SplashScreen> {
   bool isLoading = true;
 
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () {
       setState(() {
         isLoading = false;
         Navigator.pushNamed(context, '/onboarding');
