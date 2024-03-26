@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_m8/models/payment_enum.dart';
-import 'package:study_m8/ui/views/payment_screen/payment_tile.dart';
+import 'package:study_m8/ui/views/payment/payment_tile.dart';
 import 'package:study_m8/ui/widgets/custom_button.dart';
 
 class PaymentScreen extends StatefulWidget {

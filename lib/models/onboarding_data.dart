@@ -1,4 +1,4 @@
-import 'package:study_m8/ui/views/onboarding/onb_data_view.dart';
+import 'package:study_m8/ui/views/onboarding/onboarding_data.dart';
 
 final List<OnboardingData> onboardingData = [
   OnboardingData(

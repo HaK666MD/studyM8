@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:study_m8/models/course_desc.dart';
+import 'package:study_m8/models/course_enum.dart';
 
 class CourseShortDesc extends StatelessWidget {
   const CourseShortDesc({super.key, required this.desc});

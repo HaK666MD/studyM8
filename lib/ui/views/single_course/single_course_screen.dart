@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:readmore/readmore.dart';
-import 'package:study_m8/main.dart';
-import 'package:study_m8/models/course_desc.dart';
+import 'package:study_m8/models/course_enum.dart';
 import 'package:study_m8/models/course_skills.dart';
-import 'package:study_m8/ui/views/single_course_screen/course_short_descc.dart';
+import 'package:study_m8/theme/theme.dart';
+import 'package:study_m8/ui/views/single_course/course_short_desc.dart';
 import 'package:study_m8/ui/widgets/custom_button.dart';
+import 'package:study_m8/for_Lusine/show_more_or_less.dart';
 
 class SingleCourseScreen extends StatefulWidget {
   const SingleCourseScreen({super.key});
@@ -45,8 +46,8 @@ class _SingleCourseScreenState extends State<SingleCourseScreen> {
         child: SingleChildScrollView(
             child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20.0),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -70,20 +71,15 @@ class _SingleCourseScreenState extends State<SingleCourseScreen> {
                       RatingBar.builder(
                         itemSize: 23,
                         initialRating: rating,
-                        minRating: 1,
-                        direction: Axis.horizontal,
                         allowHalfRating: true,
                         itemCount: 5,
-                        itemPadding:
-                            const EdgeInsets.fromLTRB(4.0, 0.0, 0.0, 0.0),
+                        itemPadding: const EdgeInsets.only(left: 4.0),
                         itemBuilder: (context, _) => const Icon(
                           Icons.star,
                           color: Colors.amber,
                         ),
                         onRatingUpdate: (myRating) {
-                          setState(() {
-                            rating = myRating;
-                          });
+                          setState(() => rating = myRating);
                         },
                       ),
                     ],

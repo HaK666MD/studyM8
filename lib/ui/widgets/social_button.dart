@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:study_m8/main.dart';
 import 'package:study_m8/models/social_enum.dart';
+import 'package:study_m8/theme/theme.dart';
 
 class SocialButton extends StatelessWidget {
   const SocialButton({super.key, required this.social, required this.onTap});
